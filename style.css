@@ -1,0 +1,94 @@
+
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f2f4f3;
+    color: #2c3632;
+}
+
+/* Основной блок */
+.container {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Заголовок */
+h1 {
+    margin-bottom: 30px;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 600;
+}
+
+/* Описание */
+.description {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #68736d;
+}
+
+/* Поле ввода */
+.text-input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 20px 24px;
+    border: 1px solid #d0d8d3;
+    border-radius: 14px;
+    outline: none;
+    background: #ffffff;
+    color: #26352d;
+    font-size: clamp(16px, 2.5vw, 20px);
+    box-shadow: 0 8px 25px rgba(35, 55, 43, 0.06);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.text-input::placeholder {
+    color: #a0aaa4;
+}
+
+.text-input:focus {
+    border-color: #718b79;
+    box-shadow: 0 8px 25px rgba(35, 75, 48, 0.12);
+}
+
+/* Подсказка */
+.hint {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #87918b;
+}
+
+/* Адаптация для смартфонов */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .text-input {
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .description {
+        margin-bottom: 24px;
+    }
+}
